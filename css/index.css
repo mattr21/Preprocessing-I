@@ -133,4 +133,63 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+header nav a {
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+.top-content {
+  background: lavender;
+  padding: 40px 30px;
+}
+.top-content img {
+  width: 250px;
+}
+.top-content .name {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.top-content .cta button {
+  margin-top: 10px;
+  color: white;
+  background: gray;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}
+.middle-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.middle-content .listen-up {
+  width: 50%;
+}
+.middle-content .stuff-good {
+  width: 50%;
 }
