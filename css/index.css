@@ -202,3 +202,34 @@ header nav a:hover {
 .middle-content .stuff-good p:last-child {
   border-bottom: 1px solid lightgrey;
 }
+.bottom-content table {
+  width: 100%;
+  margin-top: 5px;
+}
+.bottom-content table tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+.bottom-content table tr:first-child {
+  border-bottom: 2px solid lightgrey;
+}
+.bottom-content table tr {
+  border-top: 1px solid lightgrey;
+  text-align: left;
+  padding: 50px;
+}
+.bottom-content table tr th {
+  font-weight: 700;
+  padding: 5px;
+}
+.bottom-content table tr td {
+  padding: 5px;
+}
+footer {
+  border: 1px solid red;
+  text-align: center;
+  font-size: 1.2rem;
+  background: grey;
+  margin-top: 20px;
+  padding: 20px 0;
+  color: white;
+}
