@@ -48,12 +48,233 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+
+// ====================== Variables ======================
+@mobile: 500px;
+@tablet: 800px; 
+
+// ======================= Mix Ins =======================
+.test-border() {
+	border: 1px solid red;
+  }
+
+ .box-sizing (@type: border-box) {
+	 -webkit-box-sizing: @type;
+	 -moz-box-sizing: 	 @type;
+	 box-sizing: 		 @type;
+ } 
+
+// =================== General Styles ===================
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+// =================== Custom Styles ===================
+// container
+.container {
+	border: 1px solid black;
+	max-width: 800px;
+	margin: 0 auto;
+	line-height: 1.5;
+	font-size: 1.4rem;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+// header
+header {
+	nav {
+		display: flex;
+		justify-content: flex-end;
+		margin: 20px 0;
+
+		@media (max-width: @mobile) {
+			justify-content: space-between;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+			margin-left: 30px;
+
+			@media (max-width: @mobile) {
+				margin-left: 0;
+			}
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// top-content
+.top-content {
+	background: lavender;
+	padding: 40px 30px;
+
+	img {
+		width: 250px;
+		height: 100%;
+	}
+
+	.img {
+		@media (max-width: @mobile) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	.name {
+		border-bottom: 1px solid lightgrey;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+
+		@media (max-width: @mobile) {
+			display: none;
+		}
+	}
+
+	.mobile-name {
+		display: none;
+
+		@media (max-width: @mobile) {
+			display: block;
+			text-align: center;
+			border-bottom: 1px solid lightgrey;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.cta {
+		.cta-button {
+			@media (max-width: @mobile) {
+				display: flex;
+				justify-content: center;
+			}
+		}
+		
+		p {
+			@media (max-width: @mobile) {
+				text-align: center;
+			}
+		}
+
+		button {
+			margin-top: 10px;
+			color: white;
+			background: gray;
+			padding: 5px 10px;
+			font-size: 1.5rem;
+
+			@media (max-width: @mobile) {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+// middle-content
+.middle-content {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+
+	@media (max-width: 500px) {
+		display: block;
+	}
+
+	.listen-up {
+		width: 48.5%;
+
+		@media (max-width: 500px) {
+			width: 100%
+		}
+	}
+
+	.stuff-good {
+		width: 48.5%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			margin-top: 20px;
+		}
+
+		p {
+			border-top: 1px solid lightgrey;
+			border-left: 1px solid lightgrey;
+			border-right: 1px solid lightgrey;
+			padding: 5px 10px;
+		}
+
+		p:last-child {
+			border-bottom: 1px solid lightgrey;
+		}
+	}
+}
+
+// bottom-content
+.bottom-content {
+
+	table {
+		width: 100%;
+		margin-top: 5px;
+
+		tr:nth-child(even) {
+			background-color: whitesmoke;
+		}
+
+		tr:first-child {
+			border-bottom: 2px solid lightgrey;
+		}
+
+		tr {
+
+			border-top: 1px solid lightgrey;
+			text-align: left;
+			padding: 50px;
+
+			th {
+				font-weight: 700;
+				padding: 5px;
+			}
+
+			td {
+				padding: 5px;
+			}
+		}
+	}
+
+	.contact {
+		margin-top: 20px;
+	}
+}
+
+// footer
+footer {
+	text-align: center;
+	font-size: 1.2rem;
+	background: grey;
+	margin-top: 20px;
+	padding: 20px 0;
+	color: white;
 }
 
