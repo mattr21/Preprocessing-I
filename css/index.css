@@ -145,10 +145,13 @@ h3 {
   font-size: 2rem;
 }
 .container {
+  border: 1px solid black;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.5;
   font-size: 1.4rem;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 header nav {
   display: flex;
@@ -188,10 +191,10 @@ header nav a:hover {
   margin: 20px 0;
 }
 .middle-content .listen-up {
-  width: 50%;
+  width: 48.5%;
 }
 .middle-content .stuff-good {
-  width: 50%;
+  width: 48.5%;
 }
 .middle-content .stuff-good p {
   border-top: 1px solid lightgrey;
@@ -224,8 +227,10 @@ header nav a:hover {
 .bottom-content table tr td {
   padding: 5px;
 }
+.bottom-content .contact {
+  margin-top: 20px;
+}
 footer {
-  border: 1px solid red;
   text-align: center;
   font-size: 1.2rem;
   background: grey;
